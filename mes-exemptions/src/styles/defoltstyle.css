@@ -1,0 +1,277 @@
+/* дефолтные стили проекта */
+p {margin: 5px;}
+h1 { 
+    width: 100vw;
+    margin: 0 auto;
+    margin-bottom: 1.5vh;
+    font-size: 46px; 
+    color: #304274; 
+    text-transform: uppercase; 
+    text-align: center; 
+    font-weight: 600;
+}
+h2 {
+    width: 100vw;
+    margin: 0 auto;
+    font-size: 30px;
+    color: rgb(86, 86, 86);
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+}
+h3 {
+    width: 100vw;
+    margin: 0 auto;
+    font-size: 30px;
+    color: rgb(86, 86, 86);
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 600;
+}  
+h4 {
+    width: 70vw;
+    margin: 0 auto;
+    font-size: 26px;
+    color: rgb(86, 86, 86);
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 600;
+}
+h5 {
+    width: max-content;
+    max-width: 70vw;
+    margin: 0 auto;
+    font-size: 24px;
+    color: rgb(86, 86, 86);
+    line-height: 1.2;
+    font-weight: 600;
+}
+h6 {
+    width: max-content;
+    max-width: 80vw;
+    margin: 0 auto;
+    font-size: 34px;
+    color: #49567c;
+    line-height: 1.2;
+    font-weight: 600;
+}
+.page {
+    width: 80vw;
+    height: 70vh;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.modal {
+    display: flex;
+    align-items: center;
+
+    height: 73vh;
+    width: 95vw;
+    margin: 0 auto;
+    background: #fff;
+    border: 3px solid #d88312;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+a, button { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient( #4661a9, #324377);
+    border: 5px solid #fff;
+    border-radius: 12px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.btnIcon {
+    margin-right: 2vw;
+    max-width: 70px;
+    max-height: 70px;
+}
+.btnText {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+.btnVideoCall {
+    background: linear-gradient(#f6a439, #d88312);
+    width: 80vw;
+    height: 13vh;
+}
+.btnThird {
+    width: 20vw;
+    height: 10vh;
+    padding: 1vh 2vw;
+}
+.btnHalf {
+    width: 30vw;
+    height: 12vh;
+    padding: 1vh 5vw;
+}
+.btnWhole {
+    width: 48vw;
+    height: 12vh;
+    padding: 1vh 5vw;
+    margin: 0 auto;
+}
+.btnMini {
+    padding: 1.5vh 1vw;
+    font-size: 24px;
+}
+button:disabled { border: none; background: linear-gradient(rgb(109, 109, 109), rgb(139, 139, 139))}
+
+/* клавиатура - числа */
+
+.num__form {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+.num__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 48vw;
+    height: 11vh;
+    margin-bottom: 30px;
+
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgb(86, 86, 86);
+}
+.numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 80vw;
+}
+
+/* модал клавиатура */
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.keyboard__input {
+    width: 60vw;
+    height: 10vh;
+    margin: 0 auto;
+    border: 3px solid #d88312;
+    border-radius: 10px;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgb(86, 86, 86);
+}
+.keyboard__keys {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1vh;    
+}
+.keyline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vw;
+}
+.btnKey {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin: 5px;
+
+    font-size: 42px;
+    font-weight: 600;
+    color: rgb(86, 86, 86);
+
+    background: #eeeeee;
+    border: none;
+    border-radius: 10px;
+    /* padding-top: 1vh; */
+    box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+
+.btnKey img { max-width: 50%;}
+.numbers .btnKey:last-child { width: 120px;}
+.keys1 .btnKey:last-child { width: 120px;}
+.keys2 .btnKey:first-child { width: 100px;}
+.keys3 .btnKey:first-child { width: 120px;}
+.keys4 .btnKey:first-child { width: 90px;}
+.keys5 .btnKey:nth-child(5) { width: 450px;}
+.keys5 .btnKey:last-child { 
+    width: 200px;
+    font-size: 24px;
+    background:linear-gradient( #49567c, #5066a1);
+    color: #fff;
+}
+.caps__on { background:linear-gradient( #49567c, #6477ac);}
+
+
+/* ошибки  */
+
+.error-box { 
+    border: 3px solid red; 
+    box-shadow: 0 14px 14px rgba(255, 0, 0, 0.25), 0 5px 5px rgba(255, 0, 0, 0.22);
+}
+.error-text { 
+    min-height: 25vh;
+    height: max-content;
+    max-width: 80vw;
+    font-size: 30px; 
+    line-height: 1.5;
+    font-weight: 600;
+    color: red; 
+    text-align: center;
+    margin-top: -3vh;
+    margin: 0 auto;
+}
+
+/* стилизация оранж */
+
+.orange-box {
+    background: #fff;
+    border: 3px solid #d88312;
+    border-radius: 10px;
+}
+.orange-text {
+    font-size: 28px;
+    color: #db8b22;
+    width: max-content;
+    font-weight: 600;   
+}
+
+/* список */
+
+.list {
+    font-size: 24px;
+    color: rgb(86, 86, 86);
+    line-height: 1.2;
+    text-align: left;
+    
+    width: 45%;
+    margin: 3vh 0 3vh 3vw;
+}

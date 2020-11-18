@@ -1,0 +1,153 @@
+
+/* home */
+.homePage { justify-content: space-between;}
+.btnHome { 
+    width: 37vw;
+    height: 17vh;
+    padding: 1vh 5vw;
+    justify-content: unset;
+}
+.btnHome p { text-align: left;}
+
+/* pers data */
+.persPage { height: 50vh;}
+
+/* lgoti */
+.lgot__no-connect { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 45vh;
+}
+.lgot__confirm-address__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 7vw;
+    width: 75vw;
+    height: 25vh;
+    border: 3px solid #d88312;
+    background-color: #fff;
+    border-radius: 10px;
+
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgb(86, 86, 86);
+}
+.lgot__confirm-address__item {
+    max-width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    align-self: start;
+}
+.lgot__confirm-address__item p {
+    display: inline-block;
+    margin-left: 2vw;
+}
+.lgot__confirm-address__item h3 {
+    display: inline-block;
+    width: max-content;
+    max-width: 40vw;
+    margin-left: 2vw;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+/* fio */
+.fio__box {
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+}
+.fio__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 2vh;
+}
+.fio__input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 55vw;
+    height: 7vh;
+    border: 3px solid #db8b22;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-left: 1.5vw;
+    padding: 10px 30px;
+    font-size: 28px;
+}
+.fio__item:first-child::after,
+.fio__item:nth-child(2)::after,
+.fioform .fio__item:nth-child(3)::after {
+    content: '*';
+    position: absolute;
+    right: 11vw;
+    font-size: 34px;
+    color: #db8b22;
+}
+
+/* lgoti list */
+.lgotListPage {
+    height: 60vh;
+    width: 70vw;
+}
+.veteranBox {
+    max-width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4vh 2vw;
+    margin: 2vh 0;
+}
+.veteranBox h3 { 
+    width: 70vw;
+}
+
+/* scan-doc-page */
+
+.skan-page__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    padding: 1vh 2vw 4vh;
+}
+.scan-page__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 23vh;    
+    margin: 0 .8vw;
+}
+.scan-page__item h3 {
+    width: 17vw;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.scan-page__item button { width: 17vw;}
+
+/* видеовызов */
+
+#videocall-window {
+    height: 45vh;
+    width: 60vw;
+}
+
+/* станица регистрации */
+
+.registration-box {
+    display:flex;
+    flex-direction:column;place-content:space-around; 
+    margin: 5vh 0;
+}
