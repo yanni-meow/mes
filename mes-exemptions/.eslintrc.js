@@ -35,5 +35,6 @@ module.exports = {
     'no-unused-expressions': 1,
     'react/jsx-closing-tag-location': 1,
     'import/prefer-default-export': 0,
+    'no-else-return': 1,
   },
 };

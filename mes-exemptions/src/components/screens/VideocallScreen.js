@@ -5,7 +5,8 @@ import React, { useState } from 'react';
 // import Errors from './9.3.errors';
 // import Modal from './modal';
 
-const VideoCallScreen = () => {
+const VideoCallScreen = ({ setActiveScreen }) => {
+  setActiveScreen('videocallScreen');
   const [isOperatorError, setIsOperatorError] = useState(false);
   console.log('render video call screen === ');
   return (
@@ -19,7 +20,7 @@ const VideoCallScreen = () => {
 
       <h1>Видеозвонок</h1>
       <div className="orange-box" id="videocall-window" />
-      {/* <Link to="/home" className="btnHalf btnText" style={{ background: 'red' }}>Завершить звонок</Link> */}
+      <button className="btnHalf btnText" style={{ background: 'red' }} onClick={() => { setActiveScreen('homeScreen'); }}>Завершить звонок</button>
     </div>
   );
 };

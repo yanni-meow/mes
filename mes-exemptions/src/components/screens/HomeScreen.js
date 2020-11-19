@@ -7,11 +7,11 @@ import list from '../../images/list.png';
 import info from '../../images/info.png';
 import education from '../../images/education.png';
 // import { authentification } from '../utils/API';
-import { updateActiveScreen } from '../../store/globalState';
+// import { updateActiveScreen } from '../../store/globalState';
 // import { ErrorList } from './API-errors';
 
 const HomeScreen = (props) => {
-  const { setRouteSelection } = props;
+  const { setRouteSelection, setActiveScreen } = props;
   //   const fetchData = async () => {
   //     await authentification();
   //   };
@@ -33,7 +33,7 @@ const HomeScreen = (props) => {
   ];
 
   const handleClick = (wayto) => {
-    updateActiveScreen('piiScreen');
+    setActiveScreen('piiScreen');
     setRouteSelection(wayto);
   };
 
@@ -53,13 +53,11 @@ const HomeScreen = (props) => {
   return (
     <div className="homePage page">
 
-      {/* { isLoading && 'spinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspinerspiner'} */}
-
       {/* { session
             && ( */}
       <>
         <h1>Выберите услугу</h1>
-        <button className="btnVideoCall" onClick={() => { updateActiveScreen('videocallScreen'); }}>
+        <button className="btnVideoCall" onClick={() => { setActiveScreen('videocallScreen'); }}>
           <img className="btnIcon" src={video} />
           <p className="btnText">Видеозвонок</p>
         </button>

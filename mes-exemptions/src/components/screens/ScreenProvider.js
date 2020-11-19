@@ -1,37 +1,40 @@
+// 2.1 screen
+
 import React, { useState } from 'react';
-import GlobalState from '../../store/globalState';
+import ConfirmAddressScreen from './ConfirmAddressScreen';
+// import { Store } from 'pullstate';
+// import GlobalState from '../../store/globalState';
 import ExemptionsScreen from './ExemptionsScreen';
 import HomeScreen from './HomeScreen';
 import PersonalAccountScreen from './PersonalAccountScreen';
 import PiiScreen from './PiiScreen';
+import UserInfoScreen from './UserInfoScreen';
 import VideoCallScreen from './VideocallScreen';
-// import CheckUpdatesScreen from './CheckUpdatesScreen';
-// import LoginScreen from './LoginScreen';
-// import CheckDevicesScreen from './CheckDevicesScreen';
-// import WaitingScreen from './WaitingScreen';
-// import InviteScreen from './InviteScreen';
-// import ProcessTicketScreen from './TicketProcessScreen';
 
-const ScreenProvider = () => {
+const ScreenProvider = ({ activeScreen, setActiveScreen }) => {
   console.log('rerender screen provider === ');
-
-  const activeScreen = GlobalState.useState((s) => s.activeScreen);
   const [routeSelection, setRouteSelection] = useState('');
 
   const getContent = () => {
     switch (activeScreen) {
       case 'homeScreen':
-        return <HomeScreen setRouteSelection={setRouteSelection} />;
+        return <HomeScreen setActiveScreen={setActiveScreen} setRouteSelection={setRouteSelection} />;
       case 'piiScreen':
-        return <PiiScreen routeSelection={routeSelection} />;
+        return <PiiScreen setActiveScreen={setActiveScreen} routeSelection={routeSelection} />;
       case 'videocallScreen':
-        return <VideoCallScreen />;
+        return <VideoCallScreen setActiveScreen={setActiveScreen} />;
       case 'exemptionsScreen':
-        return <ExemptionsScreen />;
+        return <ExemptionsScreen setActiveScreen={setActiveScreen} />;
       case 'personalAccountScreen':
-        return <PersonalAccountScreen />;
-        //   case 'checkDevicesScreen':
-        //     return <CheckDevicesScreen />;
+        return <PersonalAccountScreen setActiveScreen={setActiveScreen} />;
+      case 'confirmAddressScreen':
+        return <ConfirmAddressScreen setActiveScreen={setActiveScreen} />;
+      case 'userInfoScreen':
+        return <UserInfoScreen setActiveScreen={setActiveScreen} />;
+      // case 'confirmAddressScreen':
+      //   return <ConfirmAddressScreen setActiveScreen={setActiveScreen} />;
+      // case 'confirmAddressScreen':
+      //   return <ConfirmAddressScreen setActiveScreen={setActiveScreen} />;
       default:
         return <div>default</div>;
     }

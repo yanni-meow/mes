@@ -1,15 +1,15 @@
 // 1.2 screen
 
 import React from 'react';
-import { authentificationSystem } from '../../api/api';
-import GlobalState, { updateActiveScreen } from '../../store/globalState';
+import { apiMethod } from '../../api/api';
+// import GlobalState, { updateActiveScreen } from '../../store/globalState';
 
 const PiiScreen = (props) => {
-  const { routeSelection } = props;
+  const { routeSelection, setActiveScreen } = props;
 
-  const tryAuth = () => {
-    authentificationSystem();
-    // updateActiveScreen(routeSelection);
+  const tryAuth = async () => {
+    await apiMethod('authentificationSystem');
+    setActiveScreen(routeSelection);
   };
 
   return (
@@ -22,7 +22,7 @@ const PiiScreen = (props) => {
         <br />
         "О персональных данных" от 27.07.2006 N 152-ФЗ.
       </h3>
-      <button className="btnHalf" onClick={() => { updateActiveScreen('homeScreen'); }}><p className="btnText">Назад</p></button>
+      <button className="btnHalf" onClick={() => { setActiveScreen('homeScreen'); }}><p className="btnText">Назад</p></button>
       <button className="btnHalf" onClick={tryAuth}><p className="btnText">Далее</p></button>
     </div>
   );

@@ -1,19 +1,19 @@
-import { Store } from 'pullstate';
+// import { Store } from 'pullstate';
 
-const GlobalState = new Store({
-  activeScreen: 'homeScreen',
-//   isLoading: false,
-//   showErrorScreen: false,
-//   lastAction: null,
-//   session: '',
-});
-export default GlobalState;
+// const GlobalState = new Store({
+//   activeScreen: 'homeScreen',
+// //   isLoading: false,
+// //   showErrorScreen: false,
+// //   lastAction: null,
+// //   session: '',
+// });
+// export default GlobalState;
 
-export const updateActiveScreen = (values) => {
-  GlobalState.update((s) => {
-    s.activeScreen = values;
-  });
-};
+// export const updateActiveScreen = (values) => {
+//   GlobalState.update((s) => {
+//     s.activeScreen = values;
+//   });
+// };
 
 // export const isLoadingToggle = () => {
 //   GlobalState.update((s) => {
